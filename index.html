@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Buy a Car</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            barlow: ["Barlow Condensed", "sans-serif"],
+            outfit: ["Outfit", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              orange: "#da6600",
+              white: "#f6f5fa",
+              black: "#141416",
+            },
+            backgroundImage: {
+              bgImg:
+                "url('https://images.pexels.com/photos/9846101/pexels-photo-9846101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .btn {
+          background-color: #da6600;
+          padding: 0.5rem 1rem;
+          margin-top: 1rem;
+          font-size: small;
+          max-width: fit-content;
+        }
+        .btn-border {
+          padding: 0.5rem 1rem;
+          margin-top: 1rem;
+          font-size: small;
+          max-width: fit-content;
+          border: 1px solid #f6f5fa;
+        }
+        .hover-white {
+          color: #b4b4b4;
+        }
+        a:hover {
+          color: #9e9e9e;
+        }
+        .btn:hover {
+          color: #f6f5fa;
+          background-color: #fc7601;
+          transform: scale(1.02);
+        }
+        .card:hover{
+          background: linear-gradient(90deg,#1b1b1b,#1f1e1e);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="container-fluid lg:container bg-black font-outfit text-white mx-auto"
+  >
+    <!-- Header -->
+    <header class="container fixed">
+      <div
+        id="header-container"
+        class="w-11/12 sm:w-10/12 bg-black mx-auto flex justify-between items-center py-4"
+      >
+        
+          <a href="#">
+            <div id="logo" class="flex gap-2">
+<i class="bx bxl-sketch text-2xl text-orange"></i>
+          <span class="text-white text-lg font-barlow">DIAMONDS CARS</span>
+        
+            </div>
+            
+          </a>
+        <nav id="navigation">
+          <ul class="text-white font-light text-xs flex gap-4 md:gap-8">
+            <li><a href="#hero" class="underline">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="w-11/12 md:w-10/12 mx-auto pt-16">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="w-full flex flex-col mt-6 pb-16 gap-10 border-b-[1px] border-gray-700"
+      >
+        <div
+          class="flex flex-col sm:flex-row sm:justify-between gap-2 sm:items-center"
+        >
+          <div class="w-8/12 sm:w-5/12 text-5xl font-barlow font-semibold">
+            <h1>THE EASIEST WAY TO RENT A CAR</h1>
+          </div>
+          <div class="sm:w-5/12">
+            <p>
+              Explore the Latest Innovation and Hottest Wheels on Our Car
+              Enthusiast Website!
+            </p>
+            <a href="#"><button class="btn">Get started</button></a>
+          </div>
+        </div>
+        <img
+          src="https://images.pexels.com/photos/39501/lamborghini-brno-racing-car-automobiles-39501.jpeg"
+          alt="hero-img"
+          class="h-48 sm:h-96 object-cover"
+        />
+        <div
+          class="flex flex-col sm:flex-row justify-between sm:items-end gap-4"
+        >
+          <div class="sm:w-5/12">
+            <h2>Special price this year</h2>
+            <div class="flex items-end mt-4">
+              <p class="font-barlow text-5xl font-semibold">$ 90,000</p>
+              <p class="font-barlow">/$10,000 EVERY MONTH</p>
+            </div>
+          </div>
+          <div class="flex text-center gap-6 justify-between">
+            <div class="card p-1 rounded-md">
+              <p class="font-barlow text-3xl font-semibold mb-2">875 MPH</p>
+              <h2 class="text-sm">Top Speed</h2>
+            </div>
+            <div class="card p-1 rounded-md">
+              <p class="font-barlow text-3xl font-semibold mb-2">60 LITERS</p>
+              <h2 class="text-sm">Consumption</h2>
+            </div>
+            <div class="card p-1 rounded-md">
+              <p class="font-barlow text-3xl font-semibold mb-2">5.0</p>
+              <h2 class="text-sm">Safety Rating</h2>
+            </div>
+            <div class="card p-1 rounded-md">
+              <p class="font-barlow text-3xl font-semibold mb-2">2.5$</p>
+              <h2 class="text-sm">Acceleration</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="flex flex-col sm:flex-row gap-10 py-20 border-b-[1px] border-gray-700"
+      >
+        <div id="service-text" class="sm:w-6/12">
+          <h1 class="text-4xl font-barlow font-semibold mb-4">OUR SERVICES</h1>
+          <p>
+            This service involves repairing or replacing major components of
+            your car, such as the engine, transmission, or suspension.
+          </p>
+          <a href="#"><button class="btn">Learn more</button></a>
+        </div>
+        <div id="services-cards" class="sm:w-6/12 grid grid-cols-2 gap-4">
+          <div id="service-card" class="h-48 border-[1px] border-gray-700 p-3 card">
+            <i class="bx bx-check-shield text-5xl mb-2"></i>
+            <h2>Safety First</h2>
+            <p class="text-[10px] mt-2">
+              Experienced stall and professionally trained chouffeurs
+            </p>
+          </div>
+          <div id="service-card" class="h-48 border-[1px] border-gray-700 p-3 card">
+            <i class="bx bx-like text-5xl mb-2"></i>
+            <h2>Reasonable rates</h2>
+            <p class="text-[10px] mt-2">
+              We can offer you the right vehicle at the right price to fit your
+              budget
+            </p>
+          </div>
+          <div id="service-card" class="h-48 border-[1px] border-gray-700 p-3 card">
+            <i class="bx bx-cog text-5xl mb-2"></i>
+            <h2>Largest Fleet</h2>
+            <p class="text-[10px] mt-2">
+              We offer an extensive feet of vehicles including sedon dons,
+              limousines and coach buses.
+            </p>
+          </div>
+          <div id="service-card" class="h-48 border-[1px] border-gray-700 p-3 card">
+            <i class="bx bxs-car-mechanic text-5xl mb-2"></i>
+            <h2>Nationwide service</h2>
+            <p class="text-[10px] mt-2">
+              We provide our transportation services nationwide
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section
+        id="about"
+        class="flex flex-col py-20 gap-10 border-b-[1px] border-gray-700"
+      >
+        <h1 class="font-barlow">ABUOT US</h1>
+        <div
+          class="flex sm:flex-row flex-col justify-between gap-2 items-center"
+        >
+          <div class="sm:w-5/12 text-4xl font-barlow font-semibold">
+            <h1>WE'RE HERE TO HELP YOU FIND THE PERFECT CAR</h1>
+          </div>
+          <div class="sm:w-5/12">
+            <p>
+              We are to committed to providing our customers with best possible
+              service at fair price.
+            </p>
+            <button class="btn">Learn more</button>
+          </div>
+        </div>
+        <img
+          src="https://images.pexels.com/photos/136872/pexels-photo-136872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="hero-img"
+          class="h-96 object-cover"
+        />
+      </section>
+      <section
+        id="pricing"
+        class="flex flex-col py-20 gap-10 border-b-[1px] border-gray-700"
+      >
+        <div
+          class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center"
+        >
+          <div class="sm:w-5/12 text-4xl font-barlow font-semibold">
+            <h1>HIGHLIGHT STYLE</h1>
+          </div>
+          <div class="sm:w-5/12">
+            <p>
+              We understand that every event is unique, and we strive to
+              acommodate your individual needs.
+            </p>
+          </div>
+        </div>
+        <div id="price-cards" class="grid sm:grid-cols-3 sm:gap-4 gap-8">
+          <div id="price-card" class="flex flex-col gap-4 card">
+            <img
+              src="https://images.pexels.com/photos/6336048/pexels-photo-6336048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="price_card-img"
+              class="h-48 object-cover"
+            />
+            <div id="price_card-text" class="flex flex-col gap-2">
+              <h1>Dailmer AG</h1>
+              <p class="w-10/12 text-[10px]">
+                With its aerodinamic curves and bold lines, this car is a
+                standout on the road, turning heads and making a statement
+                wherever it goes.
+              </p>
+              <h2 class="text-sm">$35,500,00 USD | MSRP:$35,500</h2>
+            </div>
+            <button class="btn-border hover:btn">Explore</button>
+          </div>
+          <div id="price-card" class="flex flex-col gap-4 card">
+            <img
+              src="https://images.pexels.com/photos/7762678/pexels-photo-7762678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="price_card-img"
+              class="h-48 object-cover"
+            />
+            <div id="price_card-text" class="flex flex-col gap-2">
+              <h1>Dailmer AG</h1>
+              <p class="w-10/12 text-[10px]">
+                With its aerodinamic curves and bold lines, this car is a
+                standout on the road, turning heads and making a statement
+                wherever it goes.
+              </p>
+              <h2 class="text-sm">$35,500,00 USD | MSRP:$35,500</h2>
+            </div>
+            <button class="btn-border hover:btn">Explore</button>
+          </div>
+          <div id="price-card" class="flex flex-col gap-4 card">
+            <img
+              src="https://images.pexels.com/photos/10222084/pexels-photo-10222084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="price_card-img"
+              class="h-48 object-cover"
+            />
+            <div id="price_card-text" class="flex flex-col gap-2">
+              <h1>Dailmer AG</h1>
+              <p class="w-10/12 text-[10px]">
+                With its aerodinamic curves and bold lines, this car is a
+                standout on the road, turning heads and making a statement
+                wherever it goes.
+              </p>
+              <h2 class="text-sm">$35,500,00 USD | MSRP:$35,500</h2>
+            </div>
+            <button class="btn-border hover:btn">Explore</button>
+          </div>
+        </div>
+      </section>
+      <section id="cta" class="py-20 border-b-[1px] border-gray-700">
+        <div
+          id="service-text"
+          class="flex flex-col justify-center items-left h-[300px] pl-8 bg-bgImg bg-center bg-left"
+        >
+          <h1 class="text-4xl font-barlow font-semibold mb-4 bg">
+            GET A FAIR PRICE FOR YOUR CAR
+          </h1>
+          <p class="w-6/12 drop-shadow-md">
+            We are committed to providing our customers with exceptional
+            service, competitive pricing and a wide range of vehicles to choose
+            from.
+          </p>
+          <button class="btn">Learn more</button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      id="footer"
+      class="flex flex-col sm:flex-row justify-between w-10/12 mx-auto py-10 items-center sm:items-start gap-8"
+    >
+      <div id="footer-media" class="flex flex-col w-5/12 items-center">
+        <div id="logo" class="flex gap-2 items-center mb-4">
+          <i class="bx bxl-sketch text-2xl text-orange"></i>
+          <span class="text-white text-lg font-barlow">DIAMONDS CARS</span>
+        </div>
+        <div id="media-icons" class="flex gap-4 text-xl">
+          <a href="#"
+            ><i class="bx bxl-instagram-alt hover:hover-white"></i>
+          </a>
+          <a href="#"><i class="bx bxl-twitter hover:hover-white"></i> </a>
+          <a href="#"
+            ><i class="bx bxl-linkedin-square hover:hover-white"></i
+          ></a>
+        </div>
+      </div>
+      <div id="footer-lists" class="w-full flex justify-around">
+        <div id="footer-menu" class="">
+          <h2>Menu</h2>
+          <ul class="text-[10px] flex flex-col gap-2 mt-4">
+            <li><a href="#"">About Us</a></li>
+            <li><a href="#"">Newsroom</a></li>
+            <li><a href="#"">Careers</a></li>
+            <li><a href="#"">Parrnership</a></li>
+          </ul>
+        </div>
+        <div id="footer-help">
+          <h2>Get Help</h2>
+          <ul class="text-[10px] flex flex-col gap-2 mt-4">
+            <li><a href="#" ">Support Carrer</a></li>
+            <li><a href="#" ">24hs Service</a></li>
+            <li><a href="#" ">Quick Chat</a></li>
+          </ul>
+        </div>
+        <div id="footer-support">
+          <h2>Support</h2>
+          <ul class="text-[10px] flex flex-col gap-2 mt-4">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Policy</a></li>
+            <li><a href="#">Business</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <img
+        src="https://streetsmn.s3.us-east-2.amazonaws.com/wp-content/uploads/2013/10/Screen-shot-2013-10-27-at-10.51.49-PM.png"
+        alt="map"
+        id="footer-map"
+        class="sm:w-4/12 rounded-md"
+      />
+    </footer>
+  </body>
+</html>
