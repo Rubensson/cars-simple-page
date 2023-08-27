@@ -68,6 +68,7 @@
         .card:hover{
           background: linear-gradient(90deg,#1b1b1b,#1f1e1e);
         }
+        
       }
     </style>
   </head>
@@ -91,7 +92,7 @@
           </a>
         <nav id="navigation">
           <ul class="text-white font-light text-xs flex gap-4 md:gap-8">
-            <li><a href="#hero" class="underline">Home</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#footer">Contact</a></li>
@@ -109,11 +110,11 @@
         <div
           class="flex flex-col sm:flex-row sm:justify-between gap-2 sm:items-center"
         >
-          <div class="w-8/12 sm:w-5/12 text-5xl font-barlow font-semibold">
+          <div class="w-8/12 sm:w-5/12 text-5xl font-barlow font-semibold ">
             <h1>THE EASIEST WAY TO RENT A CAR</h1>
           </div>
           <div class="sm:w-5/12">
-            <p>
+            <p class="animate">
               Explore the Latest Innovation and Hottest Wheels on Our Car
               Enthusiast Website!
             </p>
@@ -301,17 +302,21 @@
       <section id="cta" class="py-20 border-b-[1px] border-gray-700">
         <div
           id="service-text"
-          class="flex flex-col justify-center items-left h-[300px] pl-8 bg-bgImg bg-center bg-left"
+          class="flex relative flex-col justify-center items-left p-8 bg-bgImg bg-right bg-cover"
         >
-          <h1 class="text-4xl font-barlow font-semibold mb-4 bg">
+        
+          <div class="w-full absolute left-0 top-0 h-full opacity-70 bg-gradient-to-r from-black z-0"></div>
+
+          <h1 class="text-4xl font-barlow font-semibold mb-4 bg z-10">
             GET A FAIR PRICE FOR YOUR CAR
           </h1>
-          <p class="w-6/12 drop-shadow-md">
+          
+          <p class="w-6/12 z-10">
             We are committed to providing our customers with exceptional
             service, competitive pricing and a wide range of vehicles to choose
             from.
           </p>
-          <button class="btn">Learn more</button>
+          <button class="btn z-10">Learn more</button>
         </div>
       </section>
     </main>
